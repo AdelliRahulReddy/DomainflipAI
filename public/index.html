@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags for SEO and Social Sharing -->
+    <title>DomainFlip AI: AI-Powered Domain Analysis & Flipping Insights</title>
+    <meta name="description" content="Leverage cutting-edge AI to find, analyze, and flip high-value domain names effortlessly. Get comprehensive SEO data, flip scores, and market insights.">
+    <meta name="keywords" content="domain flipping, AI domain analysis, profitable domains, expired domains, new domains, SEO, brandability, domain investing, AI tools">
+    <meta name="author" content="DomainFlip AI Team">
+
+    <!-- Open Graph / Facebook / LinkedIn Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.domainflipai.com/"> <!-- Replace with your actual URL -->
+    <meta property="og:title" content="DomainFlip AI: AI-Powered Domain Analysis & Flipping Insights">
+    <meta property="og:description" content="Leverage cutting-edge AI to find, analyze, and flip high-value domain names effortlessly. Get comprehensive SEO data, flip scores, and market insights.">
+    <meta property="og:image" content="https://www.domainflipai.com/images/og-image.jpg"> <!-- Replace with a compelling image URL -->
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.domainflipai.com/"> <!-- Replace with your actual URL -->
+    <meta name="twitter:title" content="DomainFlip AI: AI-Powered Domain Analysis & Flipping Insights">
+    <meta name="twitter:description" content="Leverage cutting-edge AI to find, analyze, and flip high-value domain names effortlessly. Get comprehensive SEO data, flip scores, and market insights.">
+    <meta name="twitter:image" content="https://www.domainflipai.com/images/twitter-image.jpg"> <!-- Replace with a compelling image URL -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"> <!-- For iOS devices -->
+
+    <!-- Google Fonts Import: Inter (as per your original CSS) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background effects container (for visual flair) -->
+    <div class="background-effects" aria-hidden="true"></div>
+
+    <!-- Main application container -->
+    <div class="app-container">
+        <!-- HEADER: Site navigation and user authentication controls -->
+        <header class="header">
+            <div class="header-left">
+                <a href="#hero-section" class="header-title-link" aria-label="DomainFlip AI Home">
+                    <h1 class="header-title">DomainFlip<span class="highlight-text">AI</span></h1>
+                </a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="header-nav-desktop" aria-label="Main Navigation">
+                <a href="#hero-section" class="nav-button"><i class="fas fa-home"></i> Home</a>
+                <a href="#how-it-works-section" class="nav-button"><i class="fas fa-question-circle"></i> How It Works</a>
+                <a href="#plans-section" class="nav-button"><i class="fas fa-dollar-sign"></i> Plans</a>
+                <a href="#latest-blogs-section" class="nav-button"><i class="fas fa-blog"></i> Blog</a>
+                <a href="#contact-section" class="nav-button"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="/pro" class="nav-button nav-button-pro"><i class="fas fa-gem"></i> Go Pro</a>
+            </nav>
+            
+            <div class="header-right">
+                <!-- Authentication Controls for Desktop -->
+                <!-- Anonymous/Logged Out State -->
+                <div id="authControlsAnon" class="auth-controls-desktop" role="group" aria-label="User Authentication">
+                    <button id="loginBtn" class="login-button"><i class="fas fa-sign-in-alt"></i> Login / Sign Up</button>
+                </div>
+                <!-- Logged In State (initially hidden) -->
+                <div id="authControlsUser" class="auth-controls-desktop" role="group" aria-label="User Account" style="display: none;">
+                    <img src="https://placehold.co/40x40/805AD5/FFFFFF?text=User" alt="User Avatar" class="user-avatar" id="userAvatar">
+                    <button id="logoutBtn" class="logout-button"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                </div>
+                
+                <!-- Mobile Menu Toggle Button -->
+                <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Toggle mobile navigation menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Mobile Navigation Panel (Hidden by default, toggled by JS) -->
+        <nav class="mobile-nav-panel" id="mobileNavPanel" aria-label="Mobile Navigation">
+            <a href="#hero-section" class="nav-button"><i class="fas fa-home"></i> Home</a>
+            <a href="#how-it-works-section" class="nav-button"><i class="fas fa-question-circle"></i> How It Works</a>
+            <a href="#plans-section" class="nav-button"><i class="fas fa-dollar-sign"></i> Plans</a>
+            <a href="#latest-blogs-section" class="nav-button"><i class="fas fa-blog"></i> Blog</a>
+            <a href="#contact-section" class="nav-button"><i class="fas fa-envelope"></i> Contact</a>
+            <div class="mobile-auth-controls" role="group" aria-label="Mobile User Authentication">
+                <button id="mobileLoginBtn" class="login-button"><i class="fas fa-sign-in-alt"></i> Login / Sign Up</button>
+                <button id="mobileLogoutBtn" class="logout-button" style="display: none;"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+        </nav>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="main-content">
+            <!-- HERO SECTION: Main call to action -->
+            <section id="hero-section" class="hero-section" aria-labelledby="hero-title">
+                <hgroup>
+                    <h2 id="hero-title" class="hero-title">
+                        Find Your Next<br>
+                        <span class="highlight" id="dynamic-title-text">Profitable Domain</span>.
+                    </h2>
+                    <p class="hero-subtitle"><span id="dynamic-subtitle-text">Leverage cutting-edge AI and comprehensive SEO data to find, analyze, and flip high-value domain names effortlessly.</span></p>
+                </hgroup>
+            </section>
+
+            <!-- SEARCH FORM SECTION: Separated for prominence -->
+            <section id="search-form-section" class="section-container search-form-section" aria-labelledby="search-form-title">
+                <h2 id="search-form-title" class="sr-only">Domain Search and Analysis</h2>
+                <form id="searchForm" class="search-form" aria-label="Domain Analysis Search">
+                    <div class="search-input-button-row">
+                        <label for="keywordInput" class="sr-only">Enter keyword or domain to analyze</label>
+                        <input type="text" id="keywordInput" class="search-input" placeholder="e.g., AI domain analysis" autocomplete="off" required aria-required="true">
+                        
+                        <button type="submit" id="analyzeBtn" class="search-button" aria-label="Analyze Domains">
+                            <span id="analyzeBtnText">Analyze Domains</span>
+                            <span id="analyzeBtnSpinner" class="spinner" aria-hidden="true" style="display:none;"></span>
+                        </button>
+                    </div>
+                    
+                    <fieldset class="radio-group" role="radiogroup" aria-labelledby="domainTypeLabel">
+                        <legend id="domainTypeLabel" class="sr-only">Choose Domain Type</legend>
+                        <label for="newDomains" class="radio-label">
+                            <input type="radio" id="newDomains" name="domainType" value="new" checked aria-checked="true">
+                            <i class="fas fa-plus-circle"></i> <span>New</span>
+                        </label>
+                        <label for="expiredDomains" class="radio-label">
+                            <input type="radio" id="expiredDomains" name="domainType" value="expired" aria-checked="false">
+                            <i class="fas fa-history"></i> <span>Expired</span>
+                        </label>
+                        <label for="bothDomains" class="radio-label">
+                            <input type="radio" id="bothDomains" name="domainType" value="both" aria-checked="false">
+                            <i class="fas fa-exchange-alt"></i> <span>Both</span>
+                        </label>
+                    </fieldset>
+                    <p id="searchLimitMessage" class="search-limit-message" aria-live="polite">Loading search limits...</p>
+
+                    <!-- Progress Bar Container -->
+                    <div id="progressBarContainer" class="progress-bar-container" style="display:none;">
+                        <div id="progressBarFill" class="progress-bar-fill"></div>
+                    </div>
+                </form>
+            </section>
+
+            <!-- DOMAIN RESULTS SECTION: Displays AI-generated analysis results -->
+            <section id="resultsSection" class="section-container results-section" aria-labelledby="results-title" style="display: none;">
+                <h2 id="results-title" class="section-title">Your AI-Powered Domain Insights</h2>
+                
+                <div id="domainResults" class="results-grid">
+                    <!-- Domain cards will be dynamically injected here by JavaScript -->
+                </div>
+                
+                <p id="noResultsMessage" class="no-results-message" role="status" aria-live="polite" style="display:none;">
+                    No suitable domains found for your search. Try a different keyword or domain type.
+                </p>
+                
+                <button id="downloadPdfBtn" class="download-pdf-button" style="display:none;" aria-label="Download PDF Report (Pro Feature)">
+                    <i class="fas fa-file-pdf"></i> Download PDF Report (Pro)
+                </button>
+            </section>
+
+            <!-- HOW IT WORKS SECTION: Explains the platform's process -->
+            <section id="how-it-works-section" class="section-container how-it-works-section" aria-labelledby="how-it-works-title">
+                <h2 id="how-it-works-title" class="section-title">How DomainFlip AI Works</h2>
+                <p class="section-subtitle">We leverage advanced AI to simplify your domain search, providing data-driven insights to help you make smart investment decisions.</p>
+                <div class="steps-grid">
+                    <article class="step-card" data-step="1">
+                        <div class="icon" aria-hidden="true"><i class="fas fa-keyboard"></i></div>
+                        <h3>Enter Keyword</h3>
+                        <p>Input your desired niche or keyword, like "AI health" or "crypto tech".</p>
+                    </article>
+                    <article class="step-card" data-step="2">
+                        <div class="icon" aria-hidden="true"><i class="fas fa-cogs"></i></div>
+                        <h3>AI & Data Analysis</h3>
+                        <p>Our AI analyzes domain availability, SEO metrics, and brandability.</p>
+                    </article>
+                    <article class="step-card" data-step="3">
+                        <div class="icon" aria-hidden="true"><i class="fas fa-chart-line"></i></div>
+                        <h3>Get Flip Score</h3>
+                        <p>Receive a comprehensive "Flip Score" and detailed insights for each domain.</p>
+                    </article>
+                    <article class="step-card" data-step="4">
+                        <div class="icon" aria-hidden="true"><i class="fas fa-shopping-cart"></i></div>
+                        <h3>Acquire & Profit</h3>
+                        <p>Click affiliate links to buy domains and start your flipping journey.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- PLANS SECTION: Pricing and feature comparison -->
+            <section id="plans-section" class="section-container plans-section" aria-labelledby="plans-title">
+                <h2 id="plans-title" class="section-title">Our Plans</h2>
+                <p class="section-subtitle">Choose the plan that best fits your domain flipping ambitions.</p>
+                <div class="plans-grid">
+                    <article class="plan-card">
+                        <h3>Free Plan</h3>
+                        <p class="price">₹0<small>/month</small></p>
+                        <ul role="list">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> 5 searches/day</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Basic domain analysis</li>
+                            <li><i class="fas fa-times-circle" aria-hidden="true"></i> No PDF reports</li>
+                            <li><i class="fas fa-times-circle" aria-hidden="true"></i> Limited features</li>
+                        </ul>
+                        <a href="#" class="plan-cta" aria-label="Get Started with Free Plan">Get Started (Free)</a>
+                    </article>
+                    <article class="plan-card pro">
+                        <h3>Pro Plan</h3>
+                        <p class="price">₹299<small>/month</small></p>
+                        <ul role="list">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Unlimited searches</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Advanced AI analysis</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> PDF reports</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Weekly AI-picked domains</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> AI Brand Generator</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Mini SEO Reports</li>
+                        </ul>
+                        <a href="/pro" class="plan-cta" aria-label="Upgrade to Pro Plan">Upgrade to Pro</a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- LATEST BLOGS SECTION: Recent articles and insights -->
+            <section id="latest-blogs-section" class="section-container latest-blogs-section" aria-labelledby="blogs-title">
+                <h2 id="blogs-title" class="section-title">Latest Insights</h2>
+                <p class="section-subtitle">Stay ahead with our expert articles on domain investing, SEO, and AI trends.</p>
+                <div class="blog-posts-grid">
+                    <article class="blog-card">
+                        <div class="blog-thumbnail" aria-hidden="true">
+                            <img src="https://placehold.co/300x160/1A1530/FFFFFF?text=Blog+Image+1" alt="Thumbnail for blog post 1">
+                        </div>
+                        <h3>How to Find Brandable Domains</h3>
+                        <p>Discover the secrets to identifying and acquiring highly brandable domain names for your next venture.</p>
+                        <a href="/blog/how-to-find-brandable-domains" aria-label="Read more about How to Find Brandable Domains">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </article>
+                    <article class="blog-card">
+                        <div class="blog-thumbnail" aria-hidden="true">
+                            <img src="https://placehold.co/300x160/1A1530/FFFFFF?text=Blog+Image+2" alt="Thumbnail for blog post 2">
+                        </div>
+                        <h3>Top 10 Expired .AI Domains</h3>
+                        <p>Explore a curated list of high-potential expired .AI domains ready for your next project.</p>
+                        <a href="/blog/top-10-expired-ai-domains" aria-label="Read more about Top 10 Expired .AI Domains">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </article>
+                    <article class="blog-card">
+                        <div class="blog-thumbnail" aria-hidden="true">
+                            <img src="https://placehold.co/300x160/1A1530/FFFFFF?text=Blog+Image+3" alt="Thumbnail for blog post 3">
+                        </div>
+                        <h3>Understanding Domain Flip Score</h3>
+                        <p>A deep dive into how our AI calculates the Flip Score and what it means for your investments.</p>
+                        <a href="/blog/understanding-domain-flip-score" aria-label="Read more about Understanding Domain Flip Score">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </article>
+                </div>
+                <a href="/blog" class="view-all-blogs-cta" aria-label="View All Blog Posts"><i class="fas fa-book-open" aria-hidden="true"></i> View All Blogs</a>
+            </section>
+
+            <!-- CONTACT SECTION: Contact form for user inquiries -->
+            <section id="contact-section" class="section-container contact-section" aria-labelledby="contact-title">
+                <h2 id="contact-title" class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">Have questions or feedback? We'd love to hear from you!</p>
+                <form aria-label="Contact Form">
+                    <label for="contactName" class="sr-only">Your Name</label>
+                    <input type="text" id="contactName" placeholder="Your Name" required aria-required="true">
+                    
+                    <label for="contactEmail" class="sr-only">Your Email</label>
+                    <input type="email" id="contactEmail" placeholder="Your Email" required aria-required="true">
+                    
+                    <label for="contactMessage" class="sr-only">Your Message</label>
+                    <textarea id="contactMessage" placeholder="Your Message" rows="6" required aria-required="true"></textarea>
+                    
+                    <button type="submit" aria-label="Send Message"><i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message</button>
+                </form>
+            </section>
+
+            <!-- PRO CTA SECTION: Call to action for Pro plan upgrade -->
+            <section class="pro-cta-section" aria-labelledby="pro-cta-title">
+                <h2 id="pro-cta-title" class="section-title">Ready to Maximize Your Domain Flipping?</h2>
+                <p>Join thousands of successful flippers with our Pro plan. Get started today!</p>
+                <a href="/pro" class="pro-cta-button" aria-label="Upgrade to Flip Pro Plan"><i class="fas fa-arrow-right" aria-hidden="true"></i> Upgrade to Flip Pro</a>
+            </section>
+            
+            <!-- AdSense Placeholder: For advertisements -->
+            <aside class="adsense-placeholder" role="complementary" aria-label="Advertisement Area">
+                <p>Advertisement Area</p>
+                <p>Your ad here, supporting free searches.</p>
+            </aside>
+        </main>
+
+        <!-- More Info Modal Structure -->
+        <div id="moreInfoModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" style="display:none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modalTitle" class="modal-title">Domain Details: <span id="modalDomainName"></span></h3>
+                    <button class="close-button" id="closeModalButton" aria-label="Close modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Use Case:</strong> <span id="modalUseCase"></span></p>
+                    <p><strong>Flip Score:</strong> <span id="modalFlipScore"></span></p>
+                    <p><strong>Availability:</strong> <span id="modalAvailability"></span></p>
+                    <p><strong>Estimated Value:</strong> <span id="modalEstimatedValue"></span></p>
+                    <p><strong>Search Volume:</strong> <span id="modalSearchVolume"></span></p>
+                    <p><strong>SEO Difficulty:</strong> <span id="modalSeoDifficulty"></span></p>
+                    <p><strong>Brandability:</strong> <span id="modalBrandability"></span></p>
+                    <p><strong>Domain Age:</strong> <span id="modalDomainAge"></span></p>
+                    <p class="modal-affiliate-link-container">
+                        <a id="modalAffiliateLink" href="#" target="_blank" class="buy-button modal-buy-button">
+                            <i class="fas fa-shopping-cart"></i> Buy This Domain
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login/Signup Modal Structure -->
+        <div id="authModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="authModalTitle" style="display:none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="authModalTitle" class="modal-title">Login / Sign Up</h3>
+                    <button class="close-button" id="closeAuthModalButton" aria-label="Close authentication modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="authForm" class="auth-form">
+                        <label for="authEmail" class="sr-only">Email</label>
+                        <input type="email" id="authEmail" placeholder="Email" required>
+                        
+                        <label for="authPassword" class="sr-only">Password</label>
+                        <input type="password" id="authPassword" placeholder="Password" required>
+                        
+                        <div class="auth-buttons">
+                            <button type="submit" id="loginSubmitBtn" class="auth-submit-button">Login</button>
+                            <button type="button" id="signupSubmitBtn" class="auth-submit-button signup-button">Sign Up</button>
+                        </div>
+                        <p id="authMessage" class="auth-message" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Firebase SDKs (defer loading for better performance) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js" defer></script>
+    
+    <!-- jsPDF for PDF generation (defer loading) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+    
+    <!-- Your custom JavaScript (defer loading, runs after HTML parsing) -->
+    <script src="script.js" defer></script>
+</body>
+</html>
